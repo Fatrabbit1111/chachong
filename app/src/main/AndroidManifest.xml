@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cxkr.photo">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.cxkr.photo.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.cxkr.photo.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cxkr.photo.simpic.SimPicActivity"/>
+        <activity android:name="com.cxkr.photo.album.AlbumsActivity"/>
+        <activity android:name="com.cxkr.photo.album.AlbumItemActivity"/>
+        <activity android:name="com.cxkr.photo.album.SelectedImagesActivity"/>
+        <activity android:name="com.cxkr.photo.recycle.RecyclerPictureActivity"/>
+        <activity android:name="com.cxkr.photo.BigPicActivity"/>
+        <activity android:name=".blurry.BlurryPicActivity"/>
+        <activity android:name=".blurry.BlurryPictureActivity"/>
+
+    </application>
+
+</manifest>
