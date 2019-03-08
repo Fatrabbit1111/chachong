@@ -10,7 +10,7 @@
             android:id="@+id/rl_simpic"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#FFD7CDB7"
+            android:background="#3FE2C5"
             android:orientation="vertical">
             <TextView
                 android:id="@+id/tv_header_name"
@@ -50,7 +50,7 @@
             android:layout_marginTop="8dp"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#FFD7CDB7"
+            android:background="#3FE2C5"
             android:orientation="vertical">
 
             <TextView

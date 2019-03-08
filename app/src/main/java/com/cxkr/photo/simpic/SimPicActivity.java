@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.cxkr.photo.BitmapBO;
-import com.example.photo.R;
+import com.cxkr.photo.R;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;

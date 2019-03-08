@@ -11,7 +11,7 @@ import android.widget.CheckBox;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import com.example.photo.R;
+import com.cxkr.photo.R;
 import com.cxkr.photo.recycle.JunkPictureUtil;
 
 import java.util.ArrayList;

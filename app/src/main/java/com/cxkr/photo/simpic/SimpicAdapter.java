@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.cxkr.photo.BigPicActivity;
 import com.cxkr.photo.BitmapBO;
-import com.example.photo.R;
+import com.cxkr.photo.R;
 import java.util.ArrayList;
 import java.util.List;
 

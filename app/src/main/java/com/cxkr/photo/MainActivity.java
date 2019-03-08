@@ -58,20 +58,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(com.example.photo.R.layout.activity_main);
-        tvSimSize = (TextView) findViewById(com.example.photo.R.id.tv_header_size);
-        tvBlurrySize = (TextView) findViewById(com.example.photo.R.id.tv_blurry_size);
-        tvAllSize = (TextView) findViewById(com.example.photo.R.id.tv_all_size);
-        tvRecyclerSize = (TextView) findViewById(com.example.photo.R.id.tv_recycler_size);
-        rlSim = (RelativeLayout) findViewById(com.example.photo.R.id.rl_simpic);
-        rlAblum = (RelativeLayout) findViewById(com.example.photo.R.id.rl_album);
-        rlRecycler = (RelativeLayout) findViewById(com.example.photo.R.id.rl_recycler);
-        rlBlurry = (RelativeLayout) findViewById(com.example.photo.R.id.rl_blurry);
+        setContentView(R.layout.activity_main);
+        tvSimSize = (TextView) findViewById(R.id.tv_header_size);
+       
+        tvAllSize = (TextView) findViewById(R.id.tv_all_size);
 
-        gvSim = (GridView) findViewById(com.example.photo.R.id.gv_sim_pic);
+        rlSim = (RelativeLayout) findViewById(R.id.rl_simpic);
+        rlAblum = (RelativeLayout) findViewById(R.id.rl_album);
 
 
-        mToolbar = (Toolbar) findViewById(com.example.photo.R.id.id_toolbar);
+        gvSim = (GridView) findViewById(R.id.gv_sim_pic);
+
+
+        mToolbar = (Toolbar) findViewById(R.id.id_toolbar);
         mToolbar.setTitle("照片清理");
 
         gridViewAdapter = new GridViewAdapter(MainActivity.this);

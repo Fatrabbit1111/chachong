@@ -10,7 +10,7 @@ import android.widget.ImageView;
 
 import com.cxkr.photo.BitmapBO;
 import com.cxkr.photo.ImageUtil;
-import com.example.photo.R;
+import com.cxkr.photo.R;
 
 import java.util.List;
 
@@ -45,4 +45,59 @@ public class SimPicGridViewAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return 0;
     }
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder = null;
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.item_simpic_girdview, parent, false);
+            holder = new ViewHolder();
+            holder.ivSimPic = (ImageView) convertView.findViewById(R.id.iv_sim_pic);
+            holder.ivBest = (ImageView) convertView.findViewById(R.id.iv_sim_best);
+            holder.cbPic = (CheckBox) convertView.findViewById(R.id.cb_pic);
+            convertView.setTag(holder);
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
+        final BitmapBO bitmapBO = (BitmapBO) getItem(position);
+        holder.bitmapBO = bitmapBO;
+
+        ImageUtil.getInstatnce(mContext).disPlay(bitmapBO.getFilePath(), holder.ivSimPic);
+
+        if (bitmapBO.isBestPicture()) {
+            holder.ivBest.setVisibility(View.VISIBLE);
+        } else {
+            holder.ivBest.setVisibility(View.GONE);
+        }
+        holder.cbPic.setChecked(bitmapBO.isChecked());
+
+        holder.cbPic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (callBackListener != null) {
+                    bitmapBO.setChecked(!bitmapBO.isChecked());
+                    callBackListener.onCallBack(bitmapBO);
+                }
+            }
+        });
+
+        return convertView;
+    }
+
+
+    class ViewHolder {
+        public BitmapBO bitmapBO;
+        private ImageView ivSimPic;
+        private ImageView ivBest;
+        private CheckBox cbPic;
+    }
+
+    private OnSelectedCallBackListener callBackListener;
+    public void setOnSelectedCallBackListener(OnSelectedCallBackListener callBackListener) {
+        this.callBackListener = callBackListener;
+    }
+    public interface OnSelectedCallBackListener {
+        void onCallBack(BitmapBO bitmapBO);
+    }
+}
+
 

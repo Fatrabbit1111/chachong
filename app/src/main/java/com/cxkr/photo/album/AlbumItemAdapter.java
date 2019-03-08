@@ -9,7 +9,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 
 import com.cxkr.photo.ImageUtil;
-import com.example.photo.R;
+import com.cxkr.photo.R;
 
 import java.util.List;
 

@@ -7,7 +7,7 @@ import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.GridView;
 
-import com.example.photo.R;
+import com.cxkr.photo.R;
 import com.cxkr.photo.album.PhotoUpImageItem;
 
 import java.util.ArrayList;

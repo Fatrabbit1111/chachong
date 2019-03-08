@@ -48,8 +48,8 @@ public class StickyGridAdapter extends BaseAdapter implements StickyGridHeadersS
 		ViewHolder mViewHolder;
 		if (convertView == null) {
 			mViewHolder = new ViewHolder();
-			convertView = mInflater.inflate(com.example.photo.R.layout.grid_item, parent, false);
-			mViewHolder.mImageView = (MyImageView) convertView.findViewById(com.example.photo.R.id.grid_item);
+			convertView = mInflater.inflate(com.cxkr.photo.R.layout.grid_item, parent, false);
+			mViewHolder.mImageView = (MyImageView) convertView.findViewById(com.cxkr.photo.R.id.grid_item);
 			convertView.setTag(mViewHolder);
 			mViewHolder.mImageView.setOnMeasureListener(new MyImageView.OnMeasureListener() {
 
@@ -80,7 +80,7 @@ public class StickyGridAdapter extends BaseAdapter implements StickyGridHeadersS
 		if (bitmap != null) {
 			mViewHolder.mImageView.setImageBitmap(bitmap);
 		} else {
-			mViewHolder.mImageView.setImageResource(com.example.photo.R.drawable.cl_backicon);
+			mViewHolder.mImageView.setImageResource(com.cxkr.photo.R.drawable.cl_backicon);
 		}
 
 		return convertView;
@@ -91,9 +91,9 @@ public class StickyGridAdapter extends BaseAdapter implements StickyGridHeadersS
 		HeaderViewHolder mHeaderHolder;
 		if (convertView == null) {
 			mHeaderHolder = new HeaderViewHolder();
-			convertView = mInflater.inflate(com.example.photo.R.layout.grid_header_view, parent, false);
-			mHeaderHolder.tvName = (TextView) convertView.findViewById(com.example.photo.R.id.tv_header_name);
-			mHeaderHolder.tvSize = (TextView) convertView.findViewById(com.example.photo.R.id.tv_header_size);
+			convertView = mInflater.inflate(com.cxkr.photo.R.layout.grid_header_view, parent, false);
+			mHeaderHolder.tvName = (TextView) convertView.findViewById(com.cxkr.photo.R.id.tv_header_name);
+			mHeaderHolder.tvSize = (TextView) convertView.findViewById(com.cxkr.photo.R.id.tv_header_size);
 			convertView.setTag(mHeaderHolder);
 		} else {
 			mHeaderHolder = (HeaderViewHolder) convertView.getTag();

@@ -11,7 +11,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 
 import com.cxkr.photo.ImageUtil;
-import com.example.photo.R;
+import com.cxkr.photo.R;
 import com.cxkr.photo.album.PhotoUpImageItem;
 
 import java.util.List;

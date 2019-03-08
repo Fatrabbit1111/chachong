@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
-import com.example.photo.R;
+import com.cxkr.photo.R;
 import java.util.List;
 
 public class AlbumsActivity extends AppCompatActivity {
