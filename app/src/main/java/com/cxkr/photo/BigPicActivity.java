@@ -17,9 +17,9 @@ public class BigPicActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(com.cxkr.photo.R.layout.activity_big_pic);
-        tvSize = (TextView) findViewById(com.cxkr.photo.R.id.tv_size);
-        ivBigPic = (ImageView) findViewById(com.cxkr.photo.R.id.iv_big_pic);
+        setContentView(R.layout.activity_big_pic);
+        tvSize = (TextView) findViewById(R.id.tv_size);
+        ivBigPic = (ImageView) findViewById(R.id.iv_big_pic);
         picPath = getIntent().getStringExtra("big_pic_path");
 
         ImageUtil.getInstatnce(BigPicActivity.this).disPlay(picPath, ivBigPic);

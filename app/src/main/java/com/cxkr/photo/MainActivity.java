@@ -31,27 +31,27 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private Toolbar mToolbar;
     private TextView tvSimSize;
-    private TextView tvBlurrySize;
+
     private TextView tvAllSize;
     private TextView tvRecyclerSize;
     private RelativeLayout rlSim;
     private RelativeLayout rlAblum;
-    private RelativeLayout rlRecycler;
-    private RelativeLayout rlBlurry;
+
+
     private GridView gvSim;
 
 
     ContentResolver picCR;
     public static final Uri PIC_URI = MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
     ArrayList<BitmapBO> similarBOS = new ArrayList<>();
-    ArrayList<BitmapBO> blurryBOList = new ArrayList<>();
+
     private GridViewAdapter gridViewAdapter;
-    private GridViewAdapter blurryGridAdapter;
+
     JunkSimUtil junkSimUtil;
 
     private long simPicSize = 0;
     private long albumSize = 0;
-    private long blurrySize = 0;
+
 
 
     @Override
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         tvSimSize = (TextView) findViewById(R.id.tv_header_size);
        
         tvAllSize = (TextView) findViewById(R.id.tv_all_size);
-
+        tvRecyclerSize = (TextView) findViewById(R.id.tv_recycler_size);
         rlSim = (RelativeLayout) findViewById(R.id.rl_simpic);
         rlAblum = (RelativeLayout) findViewById(R.id.rl_album);
 
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         gridViewAdapter = new GridViewAdapter(MainActivity.this);
         gvSim.setAdapter(gridViewAdapter);
 
-        blurryGridAdapter = new GridViewAdapter(MainActivity.this);
+
 
         queryPic();
 
@@ -97,13 +97,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        rlRecycler.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent albumIntent = new Intent(MainActivity.this, RecyclerPictureActivity.class);
-                startActivity(albumIntent);
-            }
-        });
+
     }
 
     private void queryPic() {
@@ -127,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 picBO.setId(picID);
                 picBO.setChecked(true);
                 similarBOS.add(picBO);
-                blurryBOList.add(picBO);
+
                 albumSize += picSize;
             }
         }

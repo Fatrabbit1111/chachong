@@ -62,9 +62,9 @@ public class GridViewAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ImageViewHolder holder = null;
         if (convertView == null) {
-            convertView = inflater.inflate(com.cxkr.photo.R.layout.grid_item, parent, false);
+            convertView = inflater.inflate(R.layout.grid_item, parent, false);
             holder = new ImageViewHolder();
-            holder.ivPic = (MyImageView) convertView.findViewById(com.cxkr.photo.R.id.grid_item);
+            holder.ivPic = (MyImageView) convertView.findViewById(R.id.grid_item);
             convertView.setTag(holder);
         } else {
             holder = (ImageViewHolder) convertView.getTag();

@@ -195,12 +195,12 @@ public class JunkSimUtil {
                         }
                     }
 
-                    //入股大于2，则表示有相似的图片
+
                     if (arrayList2.size() >= 2) {
                         BitmapBO qVar3 = null;
                         int i6 = 0;
 
-                        /////，并找出最佳的图片
+
                         while (i6 < arrayList2.size()) {
                             nextPicBO = arrayList2.get(i6);
                             if (i6 + 1 < arrayList2.size()) {

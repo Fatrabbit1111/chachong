@@ -26,4 +26,5 @@
         android:horizontalSpacing="3dip"
         android:verticalSpacing="3dip" />
     <include layout="@layout/layout_photo_manage"/>
+
 </LinearLayout>
