@@ -19,13 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".simpic.SimPicActivity"/>
-        <activity android:name=".album.AlbumsActivity"/>
-        <activity android:name=".album.AlbumItemActivity"/>
-        <activity android:name=".album.SelectedImagesActivity"/>
-        <activity android:name=".recycle.RecyclerPictureActivity"/>
-        <activity android:name=".BigPicActivity"/>
-
+        <activity android:name=".simpic.SimPicActivity" />
+        <activity android:name=".album.AlbumsActivity" />
+        <activity android:name=".album.AlbumItemActivity" />
+        <activity android:name=".album.SelectedImagesActivity" />
+        <activity android:name=".recycle.RecyclerPictureActivity" />
+        <activity android:name=".BigPicActivity" />
 
     </application>
 

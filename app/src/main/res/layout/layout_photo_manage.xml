@@ -58,7 +58,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
                 android:gravity="center_vertical"
-                android:text="全部相册"
+                android:text="相册"
                 android:textSize="15sp" />
 
             <TextView
