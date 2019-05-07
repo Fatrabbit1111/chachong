@@ -10,9 +10,6 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-/**
- * Created by yuanjin.Song on 2016/7/4.
- */
 public class SimPicUtil {
     private static final int SIXTEEN = 16;
     private static final int EIGHT = 8;

@@ -187,12 +187,7 @@ public class NativeImageLoader {
 	}
 
 
-	/**
-	 * 加载本地图片的回调接口
-	 *
-	 * @author xiaanming
-	 *
-	 */
+
 	public interface NativeImageCallBack{
 		/**
 		 * 当子线程加载完了本地的图片，将Bitmap和图片路径回调在此方法中
